@@ -1,6 +1,6 @@
 # Running
 
-This project demonstrates that ajc weaves all aspects when doing compile-time weaving, regardless of the aop.xml configuration.
+This project demonstrates that ajc weaves all classes when doing compile-time weaving, regardless of scope created by the aop.xml configuration.
 
 To run it, build both projects e.g. using `cd aspect/ && mvn clean package && cd ../woven-project && mvn clean package` and afterwards run
 
@@ -16,4 +16,4 @@ ajc -aspectpath ../aspect/target/aspectjtest-0.1-SNAPSHOT.jar -xmlConfigured src
 java -cp test-instrumented.jar:../aspect/target/aspectjtest-0.1-SNAPSHOT.jar de.test.MainClass
 ```
 
-You'll see the outputs prefixed by "=== Call1:" and "=== Call2:", i.e., both `ExampleAspect` and `SecondExampleAspect` are woven.
+You'll see the outputs prefixed by "=== Call1:" also for `ShouldNotBeInstrumented`, but it should only include the methods of the package `de.test`.
