@@ -4,6 +4,6 @@
 		<include within="de.test.*" />
 	</weaver>
 	<aspects>
-		<aspect	name="de.aspectjtest.ExampleAspect" />
+		<aspect	name="de.aspectjtest.ExampleAspect"  scope="de.test.*" />
 	</aspects>
 </aspectj>
