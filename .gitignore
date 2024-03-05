@@ -1,0 +1,11 @@
+woven-project/bytecodeanalysis/
+aspect/target/
+aspect/dependency-reduced-pom.xml
+woven-project/target/
+woven-project/dependency-reduced-pom.xml
+/.metadata/
+.classpath
+.project
+.settings/
+woven-project/test-instrumented.jar
+
