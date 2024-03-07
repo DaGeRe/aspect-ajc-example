@@ -5,7 +5,7 @@ This project demonstrates that ajc weaves all classes when doing compile-time we
 To run it, build both projects e.g. using `cd aspect/ && mvn clean package && cd ../woven-project && mvn clean package` and afterwards run
 
 To see the load-time weaving behaviour, call 
-`java --add-opens java.base/java.lang=ALL-UNNAMED -cp target/test-0.1-SNAPSHOT.jar -javaagent:../aspect/target/aspectjtest-0.1-SNAPSHOT.jar de.test.MainClass`
+`java -cp target/test-0.1-SNAPSHOT.jar -javaagent:../aspect/target/aspectjtest-0.1-SNAPSHOT.jar de.test.MainClass`
 
 You'll see the outputs prefixed by "=== Call1:", i.e., just `ExampleAspect` is woven.
 
