@@ -1,8 +1,8 @@
 # Running
 
-This project demonstrates that ajc weaves all classes when doing compile-time weaving, regardless of scope created by the aop.xml configuration.
+This project should have demonstrated that ajc weaves all classes when doing compile-time weaving, regardless of scope created by the aop.xml configuration. (Un)fortunately, thats not possible, since everything works as exepcted.
 
-To run it, build both projects e.g. using `cd aspect/ && mvn clean package && cd ../woven-project && mvn clean package` and afterwards run
+To run it, build both projects e.g. using `cd aspect/ && mvn clean package && cd ../woven-project && mvn clean package`.
 
 To see the load-time weaving behaviour, call 
 `java -cp target/test-0.1-SNAPSHOT.jar -javaagent:../aspect/target/aspectjtest-0.1-SNAPSHOT.jar de.test.MainClass`

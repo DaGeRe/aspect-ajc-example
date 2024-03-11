@@ -17,7 +17,12 @@ public class ExampleAspect {
 		
 	}
 	
-	@Before("notWithinAspect() && noSet()")
+	@Pointcut("execution(* *(..)) || execution(new(..))")
+	public void isAnExecution() {
+		
+	}
+	
+	@Before("notWithinAspect() && noSet() && isAnExecution()")
 	public void aroundStuff(final JoinPoint thisJoinPoint)
 			throws Throwable {
 		System.out.println("=== Call1: " + thisJoinPoint.getSignature() + " " + thisJoinPoint.getKind());
